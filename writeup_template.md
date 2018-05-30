@@ -27,11 +27,11 @@ The goals / steps of this project are the following:
 [image6]: ./examples/00004_00019.jpg "Traffic Sign 3"
 [image7]: ./examples/00005_00029.jpg "Traffic Sign 4"
 [image8]: ./examples/00006_00028.jpg "Traffic Sign 5"
-[image4]: ./examples/00009_00029.jpg "Traffic Sign 6"
-[image5]: ./examples/00012_00018.jpg "Traffic Sign 7"
-[image6]: ./examples/00020_00024.jpg "Traffic Sign 8"
-[image7]: ./examples/00023_00026.jpg "Traffic Sign 9"
-[image8]: ./examples/00025_00025.jpg "Traffic Sign 10"
+[image9]: ./examples/00009_00029.jpg "Traffic Sign 6"
+[image10]: ./examples/00012_00018.jpg "Traffic Sign 7"
+[image11]: ./examples/00020_00024.jpg "Traffic Sign 8"
+[image12]: ./examples/00023_00026.jpg "Traffic Sign 9"
+[image13]: ./examples/00025_00025.jpg "Traffic Sign 10"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -129,18 +129,9 @@ Only after 20 epoch, the validation and test accuracy is greater than 93%
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction:
+Use: img_class = tf.argmax(logits, axis=1) to get the results of the prediction
+Result is: [11 40 22 13  4 23 14 17  7 18] which is 100% correct according to the signnames.csv
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
