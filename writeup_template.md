@@ -135,13 +135,18 @@ Result is: [11 40 22 13  4 23 14 17  7 18] which is 100% correct according to th
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-For the first image, it is very dark and vague, so the confidence is not very high
-|Confidence  |Class  |
-|28.2  |11  |
-|7.3  |27  |
-|3.5  |18  |
-|3.1  |26  |
-|2.8  |6  |
+For the first image, it is very dark and vague, so the confidence is not very high  
+
+|Confidence|Class|
+|:-:|:-:|
+|28.2|11 Right-of-way at the next intersection|
+|7.3|27 Pedestrians|
+|3.5|18 General caution|
+|3.1|26 Traffic signals|
+|2.8|6 End of speed limit (80km/h)|  
+
+Other images prediction have higher confidence since it is more clear of the pictures
+(see details in the notebook)
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
