@@ -126,29 +126,32 @@ Only after 20 epoch, the validation and test accuracy is greater than 93%
 ![alt text][image4] ![alt text][image5] ![alt text][image6] ![alt text][image7] ![alt text][image8]
 ![alt text][image9] ![alt text][image10] ![alt text][image11] ![alt text][image12] ![alt text][image13]
 
+The image quality of the 1st, 3rd, 7th, and 9th are low, the sign itself is a little dark, then it might be difficult for the model to recognize the pictures.
+
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Use: img_class = tf.argmax(logits, axis=1) to get the results of the prediction  
 Result is: [11 40 22 13  4 23 14 17  7 18] which is 100% correct according to the signnames.csv
 
+The accuracy on orignal test dataset is 93%. The new images accuracy is 100%, a little higher/similar to the test dataset because the new images are quite similar to the test data; the new images set is very small. 
+
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-For the first image, it is very dark and vague, so the confidence is not very high  
+For the first image:  
 
 |Confidence|Class|
 |:-:|:-:|
-|28.2|11 Right-of-way at the next intersection|
-|7.3|27 Pedestrians|
-|3.5|18 General caution|
-|3.1|26 Traffic signals|
-|2.8|6 End of speed limit (80km/h)|  
+|1.00|11 Right-of-way at the next intersection|
+|1.78e-11|27 Pedestrians|
+|5.69e-12|18 General caution|
+|3.06e-13|26 Traffic signals|
+|1.16e-14|6 End of speed limit (80km/h)|  
 
-Other images prediction have higher confidence since it is more clear of the pictures
-(see details in the notebook)
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-
+I used the 10th image (General Caution) to visualize the neural network, con1, which is the first activation layer after pooling.
+From the feature maps, we can see the neural network uses the edges (vertical line in the center and triangle lines) to classify the types.
