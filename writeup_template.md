@@ -106,8 +106,8 @@ My final model consisted of the following layers:
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* validation set accuracy of 0.948 @epoch 20 
-* test set accuracy of 0.939 @epoch 20
+* validation set accuracy of 0.930 @epoch 20 
+* test set accuracy of 0.924 @epoch 20
 
 If a well known architecture was chosen:
 * What architecture was chosen?
