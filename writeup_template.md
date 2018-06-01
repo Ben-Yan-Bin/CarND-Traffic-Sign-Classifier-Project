@@ -149,6 +149,7 @@ For the first image:
 |3.06e-13|26 Traffic signals|
 |1.16e-14|6 End of speed limit (80km/h)|  
 
+For the other images, please refer to the details in the notebook file.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
